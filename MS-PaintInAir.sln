@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS-PaintInAir", "MS-PaintInAir\MS-PaintInAir.csproj", "{FCFFDA4C-44EC-4BA9-A656-11FF490F3D52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCFFDA4C-44EC-4BA9-A656-11FF490F3D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFFDA4C-44EC-4BA9-A656-11FF490F3D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFFDA4C-44EC-4BA9-A656-11FF490F3D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFFDA4C-44EC-4BA9-A656-11FF490F3D52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F52A737-9ADA-4C99-9043-6440131C70A1}
+	EndGlobalSection
+EndGlobal
