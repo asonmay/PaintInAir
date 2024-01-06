@@ -49,7 +49,7 @@ namespace MS_PaintInAir
         private void timer1_Tick(object sender, EventArgs e)
         {
             currentFrame = capture.QueryFrame();
-            CvInvoke.Flip(currentFrame, currentFrame, Emgu.CV.CvEnum.FlipType.Horizontal);
+            CvInvoke.Flip(currentFrame, currentFrame, FlipType.Horizontal);
             trackBrush();
             draw();
             paint();
@@ -60,12 +60,12 @@ namespace MS_PaintInAir
             Mat image = currentFrame.Clone();
             Mat output = currentFrame.Clone();
             CvInvoke.GaussianBlur(image, image, new Size(7, 7), 0);
-            CvInvoke.CvtColor(image, image, Emgu.CV.CvEnum.ColorConversion.Bgr2Hsv);
+            CvInvoke.CvtColor(image, image, ColorConversion.Bgr2Hsv);
             CvInvoke.InRange(image, (ScalarArray) new MCvScalar(0, 150, 150), (ScalarArray) new MCvScalar(10, 255, 255), image);
 
             VectorOfVectorOfPoint contours = new VectorOfVectorOfPoint();
             Mat hierarchy = new Mat();
-            CvInvoke.FindContours(image, contours, hierarchy, Emgu.CV.CvEnum.RetrType.External, Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxNone);
+            CvInvoke.FindContours(image, contours, hierarchy, RetrType.External, ChainApproxMethod.ChainApproxNone);
 
             int index = 0;
             double biggestContourArea = double.MinValue;
@@ -256,11 +256,6 @@ namespace MS_PaintInAir
             color = new MCvScalar(BTrackBar.Value, GTrackBar.Value, RTrackBar.Value);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void SaveButton_Click_1(object sender, EventArgs e)
         {
             Mat image = (CanvasWindow.Image as Bitmap).ToMat();
@@ -289,6 +284,11 @@ namespace MS_PaintInAir
         private void button3_Click_1(object sender, EventArgs e)
         {
             isRectangle = false;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            art = new Bitmap(currentFrame.Size.Width, currentFrame.Size.Height).ToMat();
         }
     }
 }
