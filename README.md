@@ -1,2 +1,2 @@
-A paint program that tracks colors from the screen to draw.
-Was made during a Computer Vision camp in 2023
+This is a paint program that tracks colors from the screen to draw.
+This was made during a Computer Vision camp in 2023.
